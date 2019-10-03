@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.myexodusforks" name="My Exodus Forks" version="1.0" provider-name="SomeBody">
+    <extension point="xbmc.addon.repository" name="My Exodus Forks Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/ineedthat/myexodusforks/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/ineedthat/myexodusforks/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/ineedthat/myexodusforks/master/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>My Exodus Forks</summary>
+        <description>My Exodus Forks</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
