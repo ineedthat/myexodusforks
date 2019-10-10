@@ -346,7 +346,7 @@ This is a Non-profit resource, organized solely for educational purposes which i
 	</extension>
 </addon>
 
-<addon id="script.kissmyassexodusfork.artwork" version="2.0.3" name="My Kiss Ass Exodus Fork Artwork" provider-name="Defiant">
+<addon id="script.kissmyassexodusfork.artwork" version="2.0.4" name="My Kiss Ass Exodus Fork Artwork" provider-name="Defiant">
     <requires>
         <import addon="xbmc.python" version="2.19.0"/>
     </requires>
