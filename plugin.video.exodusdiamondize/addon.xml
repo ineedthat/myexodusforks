@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.exodusdiamondize" version="8.1.3.0" name="Exodus" provider-name="SomeBody">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.exodusdiamondize" />
+		<import addon="script.exodus.artworkdiamondize" />
+		<import addon="script.exodus.metadatadiamondize" />
+		<import addon="script.module.urlresolver" />
+		<import addon="script.module.requests" />
+<!--		<import addon="script.module.lambdascrapers" />-->
+		<import addon="script.module.openscrapers" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="repository.kodibae" />
+		<import addon="repository.xbmchub" />
+		<import addon="repository.thebackup" />
+		<import addon="plugin.program.indigo" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Exodus</summary>
+		<description lang="en">[COLOR blue]No[/COLOR] support or assistance! This Add-on was forked for the fun of it, if it don't work use another addon, Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+    			<screenshot></screenshot>
+		</assets>
+		<news></news>
+	</extension>
+</addon>

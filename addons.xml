@@ -1,160 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.movietheaterbutter.auto" version="4.12" name="Greased Lightning Movie Cinema" provider-name="Greased Lightning">
-   <requires>
-        <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.movietheaterbutter.auto" />
-        <import addon="script.artwork.movietheaterbutter.auto" />
-        <import addon="script.metadata.movietheaterbutter.auto" />
-        <import addon="script.module.resolveurl" />
-        <import addon="script.module.requests" />
-        <import addon="script.module.metahandler" />
-		<import addon="script.module.diamondcrapers" version="0.0.1.82" />
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="defiant.py">
-        <provides>video</provides>
-    </extension>
-    <extension point="xbmc.service" library="service.py" start="startup" />
-	<extension point="kodi.context.item">
-		<menu id="kodi.core.main">
-			<menu>
-				<label>Greased Lightning</label>
-				<item library="context_toggle.py">
-					<label>Preferred toggle</label>
-					<visible>!System.HasAddon(context.movietheaterbutter.auto) + !Skin.HasSetting(Toggling)</visible>
-				</item>
-				<item library="context_movie.py">
-					<label>$ADDON[plugin.video.movietheaterbutter.auto 30602]</label>
-					<visible>StringCompare(ListItem.dbtype,movie) + SubString(ListItem.Path, plugin.video.movietheaterbutter.auto)</visible>
-				</item>
-				<item library="context_tvshow.py">
-					<label>$ADDON[plugin.video.movietheaterbutter.auto 30602]</label>
-					<visible>StringCompare(ListItem.dbtype,tvshow) + SubString(ListItem.Path, plugin.video.movietheaterbutter.auto)</visible>
-				</item>
-			</menu>
-		</menu>
+<addon id="plugin.video.exodusdiamondize" version="8.1.3.0" name="Exodus" provider-name="SomeBody">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0" />
+		<import addon="script.module.exodusdiamondize" />
+		<import addon="script.exodus.artworkdiamondize" />
+		<import addon="script.exodus.metadatadiamondize" />
+		<import addon="script.module.urlresolver" />
+		<import addon="script.module.requests" />
+<!--		<import addon="script.module.lambdascrapers" />-->
+		<import addon="script.module.openscrapers" />
+		<import addon="script.module.metahandler" version="1.0.0" />
+		<import addon="repository.kodibae" />
+		<import addon="repository.xbmchub" />
+		<import addon="repository.thebackup" />
+		<import addon="plugin.program.indigo" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
 	</extension>
-    <extension point="xbmc.addon.metadata">
-		<summary lang="en">Greased Lightning Could Not Be Possible Without 13Clowns, Atreides, Exodus, Exodus Redux, Placenta, Michaelmyers, Resistance, Incursion or Yoda. Much Respect To The Devs That Came Before.</summary>
-		<disclaimer lang="en">The authors of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
-		<description lang="en">Greased Lightning Could Not Be Possible Without 13Clowns, Atreides, Exodus, Exodus Redux, Placenta, Michaelmyers, Resistance, Incursion or Yoda. Much Respect To The Devs That Came Before.</description>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-    <news></news>
-    </extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Exodus</summary>
+		<description lang="en">[COLOR blue]No[/COLOR] support or assistance! This Add-on was forked for the fun of it, if it don't work use another addon, Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
+		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+    			<screenshot></screenshot>
+		</assets>
+		<news></news>
+	</extension>
 </addon>
 
-<addon id="repository.myexodusforks" name="My Exodus Forks" version="1.0" provider-name="SomeBody">
-    <extension point="xbmc.addon.repository" name="My Exodus Forks Repository">
-        <dir>
-            <info compressed="false">https://raw.githubusercontent.com/ineedthat/myexodusforks/master/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/ineedthat/myexodusforks/master/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/ineedthat/myexodusforks/master/</datadir>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>My Exodus Forks</summary>
-        <description>My Exodus Forks</description>
-        <disclaimer></disclaimer>
-        <platform>all</platform>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-        </assets>
-    </extension>
+<addon id="script.exodus.artworkdiamondize" version="3.0.1" name="Exodus Artwork" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Exodus Addon</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
 </addon>
 
-<addon id="script.artwork.movietheaterbutter.auto" version="9999.21" name="Greased Lightning Artwork" provider-name="Greased Lightning">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-		<summary>Themes for the Greased Lightning Addon</summary>
-		<description>Artwork Module for the The Greased Lightning Addon</description>
-        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
-The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
-This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-    <news></news>
-    </extension>
+<addon id="script.exodus.metadatadiamondize" version="3.0.1" name="Exodus Metadata" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.19.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Exodus Addon</summary>
+		<description>Metadata for Exodus are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
 </addon>
 
-<addon id="script.metadata.movietheaterbutter.auto" version="9999.21" name="Greased Lightning Metadata" provider-name="Greased Lightning">
-    <requires>
-        <import addon="xbmc.python" version="2.19.0"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-		<summary>Metadata for the Greased Lightning Addon</summary>
-		<description>Metadata for The Greased Lightning are maintained separately to make distribution of the the addon itself easier/faster.</description>
-        <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.
-The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.
-This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-    <news></news>
-    </extension>
-</addon>
-
-<addon id="script.module.diamondcrapers" name="Greased Lightning OpenScrapers Module" version="0.0.1.95e" provider-name="Addons4Kodi">
-    <requires>
-        <import addon="xbmc.python" version="2.25.0" />
-        <import addon="script.module.beautifulsoup4"/>
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.python.pluginsource" library="lib/default.py">
-        <provides>executable</provides>
-    </extension>
-        <extension point="xbmc.addon.metadata">
-            <platform>all</platform>
-            <summary lang="en">OpenScrapers (Greased Lightning) Module</summary>
-            <description>Scrape common video host for URL's to be playable in Kodi, simplifying addon development of video plugins requiring multi video hosts.</description>
-                <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon.[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.[CR]This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works.</disclaimer>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart></fanart>
-    </assets>
-    <news>v0.0.1.93 - Scraper cleanup and EOL fixes</news>
-    </extension>
-</addon>
-
-<addon id="script.module.movietheaterbutter.auto" version="9999.116" name="Greased Lightning Module" provider-name="Greased Lightning">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.beautifulsoup4"/>
-        <import addon="script.module.simplejson"/>
-        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
-        <import addon="script.module.requests" version="2.9.1" />
-        <import addon="script.module.xmltodict" version="0.9.0" />
-    </requires>
-    <extension point="xbmc.python.module" library="lib" />
-    <extension point="xbmc.addon.metadata">
-    <summary lang="en">[B][COLOR red]Greased Lightning[/COLOR] Script.Module[/B] is a free portal for circus freaks to see the best stuff.</summary>
-    <description lang="en">This addon does not form part of the Kodi Media Centre. Please do not seek assistance with this addon from any of the Official Kodi Support Channels.The author does not host any of the content in this addon and takes no responsibility for content found.</description>
-    <disclaimer lang="en">The author is not responsible for the use of this addon. The author is not responsible for the content found using this addon. The author does not host or own any content found within this addon. The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation. This is a Non-profit resource, organized solely for educational purposes which is protected under the Fair-Use doctrine of the Copyright Act, Specifically section 107, which does promote freedom of expression, by permitting the unlicensed use of copyright-protected works</disclaimer>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-    <news></news>
-    </extension>
+<addon id="script.module.exodusdiamondize" name="Exodus Module" version="3.2.0" provider-name="Exodus">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0" />
+		<import addon="script.module.beautifulsoup4"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Exodus</summary>
+	</extension>
 </addon>
 </addons>
