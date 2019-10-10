@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.myexodusforks" name="My Exodus Forks" version="1.2" provider-name="SomeBody">
+<addon id="repository.myexodusforks" name="My Exodus Forks" version="1.3" provider-name="SomeBody">
 <extension point="xbmc.addon.repository" name="My Exodus Forks Repository">
 	<dir>
 	<info compressed="false">https://raw.githubusercontent.com/ineedthat/myexodusforks/master/addons.xml</info>
